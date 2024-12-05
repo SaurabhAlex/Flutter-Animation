@@ -18,7 +18,7 @@ class _ListviewAnimationState extends State<ListviewAnimation>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(milliseconds: 1500),
     );
     slideAnimation = List.generate(itemCount, (index) => 
     Tween<Offset>(begin: const Offset(-1, 0), end: Offset.zero).animate(

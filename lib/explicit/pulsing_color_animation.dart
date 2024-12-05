@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ColorTransitionExample extends StatefulWidget{
-  const ColorTransitionExample({super.key});
+class PulsingColorAnimation extends StatefulWidget{
+  const PulsingColorAnimation({super.key});
   @override
-  State<ColorTransitionExample> createState() => _ColorTransitionExampleState();
+  State<PulsingColorAnimation> createState() => _PulsingColorAnimationState();
 }
 
 
 
-class _ColorTransitionExampleState extends State<ColorTransitionExample> with SingleTickerProviderStateMixin{
+class _PulsingColorAnimationState extends State<PulsingColorAnimation> with SingleTickerProviderStateMixin{
 
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TweenSequenceDemo extends StatefulWidget {
-  const TweenSequenceDemo({super.key});
-  static const String routeName = 'basics/chaining_tweens';
+class ColorCycleAnimation extends StatefulWidget {
+  const ColorCycleAnimation({super.key});
 
   @override
-  State<TweenSequenceDemo> createState() => _TweenSequenceDemoState();
+  State<ColorCycleAnimation> createState() => _ColorCycleAnimationState();
 }
 
-class _TweenSequenceDemoState extends State<TweenSequenceDemo>
+class _ColorCycleAnimationState extends State<ColorCycleAnimation>
     with SingleTickerProviderStateMixin {
   static const Duration duration = Duration(seconds: 10);
   late final AnimationController controller;
@@ -63,16 +62,20 @@ class _TweenSequenceDemoState extends State<TweenSequenceDemo>
         child: AnimatedBuilder(
           animation: animation,
           builder: (context, child) {
-            return MaterialButton(
-              color: animation.value,
-              onPressed: () async {
-                await controller.forward();
-                controller.reset();
-              },
-              child: child,
+            return SizedBox(
+              height: MediaQuery.of(context).size.height/2/2.5,
+              width: MediaQuery.of(context).size.width/2/0.8,
+              child: MaterialButton(
+                color: animation.value,
+                onPressed: () async {
+                  await controller.forward();
+                  controller.reset();
+                },
+                child: child,
+              ),
             );
           },
-          child: const Text('Animate', style: TextStyle(color: Colors.white)),
+          child: const Text('Start Animate', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
         ),
       ),
     );

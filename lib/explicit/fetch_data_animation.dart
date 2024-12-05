@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ServerDataExplicitAnimation extends StatefulWidget {
-  const ServerDataExplicitAnimation({super.key});
+class FetchDataAnimation extends StatefulWidget {
+  const FetchDataAnimation({super.key});
 
   @override
-  _ServerDataExplicitAnimationState createState() =>
-      _ServerDataExplicitAnimationState();
+  State<FetchDataAnimation> createState() =>
+      _FetchDataAnimationState();
 }
 
-class _ServerDataExplicitAnimationState
-    extends State<ServerDataExplicitAnimation> with SingleTickerProviderStateMixin {
+class _FetchDataAnimationState
+    extends State<FetchDataAnimation> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 

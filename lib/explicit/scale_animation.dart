@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class AnimatedLogo extends StatefulWidget{
-  const AnimatedLogo({super.key});
+class ScaleAnimation extends StatefulWidget{
+  const ScaleAnimation({super.key});
   @override
-  State<AnimatedLogo> createState() => _AnimatedLogoState();
+  State<ScaleAnimation> createState() => _ScaleAnimationState();
 }
 
-class _AnimatedLogoState extends State<AnimatedLogo> with SingleTickerProviderStateMixin{
+class _ScaleAnimationState extends State<ScaleAnimation> with SingleTickerProviderStateMixin{
   late Animation<double> _animation;
   late AnimationController _controller;
 

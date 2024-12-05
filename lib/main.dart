@@ -1,14 +1,20 @@
 import 'dart:math';
-import 'package:animation/tween_animation.dart';
-import 'package:animation/zoom.dart';
+import 'package:animation/explicit/scale_animation.dart';
+import 'package:animation/explicit/spring_animation.dart';
+import 'package:animation/explicit/color_cycle_animation.dart';
+import 'package:animation/other/image_zoom_feature.dart';
+import 'package:animation/explicit/sliding_number_transition.dart';
 import 'package:flutter/material.dart';
-import 'app_error_screen.dart';
-import 'explicit_animation.dart';
-import 'flip_image.dart';
-import 'implicit_animation.dart';
-import 'listview_animation.dart';
-import 'loading_indicator_animation.dart';
-import 'login_screen_animation.dart';
+import 'other/app_error_screen.dart';
+import 'other/default_color_variation.dart';
+import 'explicit/pulsing_color_animation.dart';
+import 'explicit/fetch_data_animation.dart';
+import 'explicit/flip_image.dart';
+import 'implicit/implicit_animation.dart';
+import 'explicit/listview_animation.dart';
+import 'explicit/loading_indicator_animation.dart';
+import 'explicit/login_screen_animation.dart';
+import 'other/color_variation_demo_2.dart';
 
 void main() {
   FlutterError.onError = (FlutterErrorDetails details) {
@@ -26,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoadingIndicatorAnimation(),
+      home: ColorVariationsDemo2(),
     );
   }
 }
@@ -112,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const TweenSequenceDemo()));
+                          builder: (context) => const ColorCycleAnimation()));
                 },
                 icon: const Icon(Icons.format_shapes_rounded)),
           ],

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Zoom extends StatefulWidget {
-  const Zoom({super.key});
+class ImageZoomFeature extends StatefulWidget {
+  const ImageZoomFeature({super.key});
 
   @override
-  State<Zoom> createState() => _ZoomState();
+  State<ImageZoomFeature> createState() => _ImageZoomFeatureState();
 }
 
 
-class _ZoomState extends State<Zoom> {
+class _ImageZoomFeatureState extends State<ImageZoomFeature> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
