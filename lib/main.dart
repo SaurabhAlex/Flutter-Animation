@@ -6,6 +6,7 @@ import 'package:animation/other/image_zoom_feature.dart';
 import 'package:animation/explicit/sliding_number_transition.dart';
 import 'package:flutter/material.dart';
 import 'custom_painter/bouncing_ball_animation.dart';
+import 'explicit/animated_text.dart';
 import 'other/app_error_screen.dart';
 import 'other/default_color_variation.dart';
 import 'explicit/pulsing_color_animation.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BouncingBallAnimation(),
+      home: AnimatedText(),
     );
   }
 }
